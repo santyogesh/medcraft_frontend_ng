@@ -1,0 +1,36 @@
+.navbar_div {
+    border-radius: 0px 0px 5px 5px;
+}
+.user_login_div {
+    border: 1px solid rgb(91, 75, 138);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(91, 75, 138);
+    margin-right: 20px;
+}
+
+.user_login_div:hover {
+    background-color: rgb(120, 88, 166);
+    cursor: pointer;
+}
+
+@keyframes home_page_img_animation {
+    from {
+        opacity: 0%;
+    } 
+    to {
+        opacity: 100%;
+    }
+}
+
+.home_page_image {
+    height: 80%;
+    /* border: 1px solid black; */
+    animation-name: home_page_img_animation;
+    animation-duration: 5s;
+}
+
+.page_center_txt_content {
+    margin-top: 30%;
+}

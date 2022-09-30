@@ -1,0 +1,12 @@
+.bg_color_1 {
+    background-color: rgb(76, 53, 117);
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    text-decoration: none;
+}
