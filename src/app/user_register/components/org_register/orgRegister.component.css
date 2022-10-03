@@ -1,0 +1,36 @@
+.width_8 {
+    width: 80%;
+}
+
+.smoke_text {
+    color: gray;
+}
+
+.height_6 {
+    height: 60%;
+}
+
+.input_border_rad_10 {
+    border: 1px solid rgb(76, 53, 117);
+    border-radius: 3px;
+}
+
+.submit_btn_container {
+    /* border: 1px solid black; */
+    margin-left: 30%;
+    width: 40%;
+}
+
+.submit_btn {
+    width: 100%;
+    border: 1px solid rgb(76, 53, 117);
+    background-color: rgb(76, 53, 117);
+}
+
+.left_margin_20 {
+    margin-left: 10%;
+}
+
+.form_contaienr {
+    margin-top: 5%;
+}

@@ -1,0 +1,89 @@
+<div class="container-fluid bg_color_1 navbar_div">
+    <div class="row py-2">
+        <div class="col-sm-10 text-white h3">
+            <p class="font-weight-bold">MedCraft</p>
+        </div> -->
+    </div>
+</div>
+
+
+
+<div class="container form_contaienr">
+    <div class="container-fluid">
+        <div class="container">
+            <p class="h3 text-center">
+                organization registration
+            </p>
+            <hr />
+        </div>
+    </div>
+    <form [formGroup]="orgFormGroup" (ngSubmit)="submitOrgRegForm(orgFormGroup.value)">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label class="smoke_text" for="org_name">organization name</label>
+                    <br />
+                    <input type="text" class="input_border_rad_10 width_8 height_6" for="org_name" name="organization_name" formControlName="organization_name" />
+                </div>
+                <div class="col">
+                    <label class="smoke_text" for="org_address">organization address</label>
+                    <br /> 
+                    <input class="input_border_rad_10 height_6 width_8" for="org_address" name="organization_address" formControlName="organization_address" />
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label class="smoke_text" for="org_country">organization country</label>
+                    <br />
+                    <select  class="input_border_rad_10 height_6 width_8 form-control" (change)="countryChanged($event)" type="text" name="organization_country" formControlName="organization_country">
+                        <option *ngFor="let c of countryList" [value]=c.iso2>{{ c.name }}</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="smoke_text" for="org_state">organization state</label>
+                    <br /> 
+                    <select class="form-control input_border_rad_10 height_6 width_8" (change)="stateChange($event, orgFormGroup.value)" type="text" name="organization_state" formControlName="organization_state">
+                        <option *ngFor="let s of stateList" [value]=s.iso2>{{ s.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label class="smoke_text" for="org_city">organization city</label>
+                    <br />
+                    <select class="form-control input_border_rad_10 height_6 width_8" type="text" name="organization_city" formControlName="organization_city">
+                        <option *ngFor="let c of cityList" [value]=c.name>{{ c.name }}</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="smoke_text" for="org_phone">organization phone</label>
+                    <br />
+                    <input class="input_border_rad_10 height_6 width_8" type="text" name="organization_phone" formControlName="organization_phone" />
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col">
+                    <label for="org_email" class="smoke_text">organization email</label>
+                    <br />
+                    <input class="input_border_rad_10 height_6 width_8" for="org_email" name="organization_email" type="text" formControlName="organization_email" />
+                </div>
+                <div class="col">
+                    <label for="org_password" class="smoke_text">password</label>
+                    <br/>
+                    <input class="input_border_rad_10 height_6 width_8" for="org_password" name="organization_password" type="password" formControlName="organization_password" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container submit_btn_container my-3">
+                    <p class="left_margin_20">already have an account ? <a class="text-primary">log in.</a></p>
+                    <hr/>
+                    <input type="submit" class="btn btn-primary submit_btn" value="Register Organization"/>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
