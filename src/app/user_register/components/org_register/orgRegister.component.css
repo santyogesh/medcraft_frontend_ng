@@ -34,3 +34,17 @@
 .form_contaienr {
     margin-top: 5%;
 }
+
+.user_login_div {
+    border: 1px solid rgb(91, 75, 138);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(91, 75, 138);
+    margin-right: 20px;
+}
+
+.user_login_div:hover {
+    background-color: rgb(120, 88, 166);
+    cursor: pointer;
+}

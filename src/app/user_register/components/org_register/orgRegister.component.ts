@@ -2,12 +2,12 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
 import { AddressDetailsFetch } from "src/app/services/address-details-fetch.service";
-
+import { RegistrationService } from "../../services/registration.service";
 @Component({
     selector: 'org-registration-component',
     templateUrl: './orgRegister.component.html',
     styleUrls: ['./orgRegister.component.css'],
-    providers: [AddressDetailsFetch]
+    providers: [AddressDetailsFetch, RegistrationService]
 })
 export class OrganizationRegisterComponent implements OnInit {
     // orgName:      FormControl = new FormControl("");
@@ -23,7 +23,7 @@ export class OrganizationRegisterComponent implements OnInit {
     stateList: any = [];
     cityList: any = [];
 
-    constructor(private addressDetailsFetch: AddressDetailsFetch) {
+    constructor(private addressDetailsFetch: AddressDetailsFetch, private registrationService : RegistrationService) {
         addressDetailsFetch.getCountyList().then((lst) => {console.log(lst);this.countryList = lst});
     }
 
@@ -54,11 +54,18 @@ export class OrganizationRegisterComponent implements OnInit {
         }); 
     }
 
-    async submitOrgRegForm(orgDetails: any) {
+    submitOrgRegForm(orgDetails: any) {
         console.log(orgDetails);
+        this.registrationService.registerOrganization(orgDetails).then((res : any) => {
+            console.log("-----------------------");
+            console.log(res);
+            if(res.status == 200) {
+                console.log("----- success ----");
+            } else {
+                console.log("----- Failed ------");
+            }
+        });
     }
-
-
 }
 
 

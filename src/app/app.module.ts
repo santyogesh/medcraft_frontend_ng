@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AddressDetailsFetch } from './services/address-details-fetch.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationService } from './user_register/services/registration.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    AddressDetailsFetch
+    AddressDetailsFetch,
+    RegistrationService
   ],
   bootstrap: [AppComponent]
 })
