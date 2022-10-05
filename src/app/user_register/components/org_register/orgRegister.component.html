@@ -19,30 +19,42 @@
                 organization registration
             </p>
             <hr />
+            <div *ngIf="registrationError" class="alert alert-primary">
+                {{ message }}
+            </div>
         </div>
     </div>
-    <form [formGroup]="orgFormGroup" (ngSubmit)="submitOrgRegForm(orgFormGroup.value)">
+    <form [formGroup]="orgFormGroup" (ngSubmit)="submitOrgRegForm(orgFormGroup.value)" novalidate>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <label class="smoke_text" for="org_name">organization name</label>
                     <br />
                     <input type="text" class="input_border_rad_10 width_8 height_6" for="org_name" name="organization_name" formControlName="organization_name" />
+                    <p *ngIf="orgFormGroup.controls['organization_name'].invalid && orgFormGroup.controls['organization_name'].touched" class="text-danger">
+                        please enter name
+                    </p>
                 </div>
                 <div class="col">
                     <label class="smoke_text" for="org_address">organization address</label>
                     <br /> 
                     <input class="input_border_rad_10 height_6 width_8" for="org_address" name="organization_address" formControlName="organization_address" />
+                    <p *ngIf="orgFormGroup.controls['organization_address'].invalid && orgFormGroup.controls['organization_address'].touched" class="text-danger">
+                        please enter address
+                    </p>
                 </div>
             </div>
 
-            <div class="row my-3">
+            <div class="row">
                 <div class="col">
                     <label class="smoke_text" for="org_country">organization country</label>
                     <br />
                     <select  class="input_border_rad_10 height_6 width_8 form-control" (change)="countryChanged($event)" type="text" name="organization_country" formControlName="organization_country">
                         <option *ngFor="let c of countryList" [value]=c.iso2>{{ c.name }}</option>
                     </select>
+                    <p *ngIf="orgFormGroup.controls['organization_country'].invalid && orgFormGroup.controls['organization_country'].touched" class="text-danger">
+                        please enter country
+                    </p>
                 </div>
                 <div class="col">
                     <label class="smoke_text" for="org_state">organization state</label>
@@ -50,34 +62,49 @@
                     <select class="form-control input_border_rad_10 height_6 width_8" (change)="stateChange($event, orgFormGroup.value)" type="text" name="organization_state" formControlName="organization_state">
                         <option *ngFor="let s of stateList" [value]=s.iso2>{{ s.name }}</option>
                     </select>
+                    <p *ngIf="orgFormGroup.controls['organization_state'].invalid && orgFormGroup.controls['organization_state'].touched" class="text-danger">
+                        please enter state
+                    </p>
                 </div>
             </div>
 
-            <div class="row my-3">
+            <div class="row">
                 <div class="col">
                     <label class="smoke_text" for="org_city">organization city</label>
                     <br />
                     <select class="form-control input_border_rad_10 height_6 width_8" type="text" name="organization_city" formControlName="organization_city">
                         <option *ngFor="let c of cityList" [value]=c.name>{{ c.name }}</option>
                     </select>
+                    <p *ngIf="orgFormGroup.controls['organization_city'].invalid && orgFormGroup.controls['organization_city'].touched" class="text-danger">
+                        please enter city
+                    </p>
                 </div>
                 <div class="col">
                     <label class="smoke_text" for="org_phone">organization phone</label>
                     <br />
                     <input class="input_border_rad_10 height_6 width_8" type="text" name="organization_phone" formControlName="organization_phone" />
+                    <p *ngIf="orgFormGroup.controls['organization_phone'].invalid && orgFormGroup.controls['organization_phone'].touched" class="text-danger">
+                        please enter phone
+                    </p>
                 </div>
             </div>
 
-            <div class="row my-3">
+            <div class="row">
                 <div class="col">
                     <label for="org_email" class="smoke_text">organization email</label>
                     <br />
                     <input class="input_border_rad_10 height_6 width_8" for="org_email" name="organization_email" type="text" formControlName="organization_email" />
+                    <p *ngIf="orgFormGroup.controls['organization_email'].invalid && orgFormGroup.controls['organization_email'].touched" class="text-danger">
+                        please enter email
+                    </p>
                 </div>
                 <div class="col">
                     <label for="org_password" class="smoke_text">password</label>
                     <br/>
                     <input class="input_border_rad_10 height_6 width_8" for="org_password" name="organization_password" type="password" formControlName="organization_password" />
+                    <p *ngIf="orgFormGroup.controls['organization_password'].invalid && orgFormGroup.controls['organization_password'].touched" class="text-danger">
+                        please enter password
+                    </p>
                 </div>
             </div>
 
