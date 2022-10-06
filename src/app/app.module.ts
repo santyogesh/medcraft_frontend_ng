@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AddressDetailsFetch } from './services/address-details-fetch.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationService } from './user_register/services/registration.service';
+import { OrgDashBoard } from './Home/components/dashboard/org_dashboard/org_dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    OrganizationRegisterComponent
+    OrganizationRegisterComponent,
+    OrgDashBoard
   ],
   imports: [
     BrowserModule,

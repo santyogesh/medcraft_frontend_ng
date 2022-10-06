@@ -10,7 +10,7 @@ export class AddressDetailsFetch {
     private httpHeader = new HttpHeaders({
         "X-CSCAPI-KEY": "Q0MxWEpQT2lteHRBSVEyUllQcHByb0g3WmRyWGdZSVhjMWYxWkNGZg==",
         "Content-Type": "application/json",
-    }); 
+    });
 
     constructor(private httpClient : HttpClient) {
     }
