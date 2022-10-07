@@ -1,3 +1,26 @@
 .org-dashboard-navbar {
-    padding: 10px;
+    background-color: rgb(76, 53, 117);
+    padding: 1%;
+}
+
+.profile-logo {
+    /* margin-left: 60%; */
+}
+
+.profile-btn {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(76, 53, 117);
+    border-color: rgb(55, 27, 88);
+}
+
+.profile-btn:hover {
+    background-color: rgb(55, 27, 88);
+}
+
+.searchText {
+    width: 700px;
+    margin-left: 3%;
+    border: 2px solid white;
+    border-radius: 5px;
 }

@@ -1,29 +1,26 @@
-<div class="container-fluid org-dashboard-navbar bg_color_1 d-flex justify-content-between">
-        <div class="container">
-            <p class="text-white h3">
+<div class="container-fluid org-dashboard-navbar">
+    <div class="row">
+        <div class="col-sm-3">
+            <p class="text-white h4">
                 MedCraft
             </p>
         </div>
-        <div class="container d-flex justify-content-between">
-            <p class="nav-link text-white h5">
-                Hopitals
-            </p>
-    
-            <p routerLink="/org_signup" class="text-white h5 nav-link">
-                Doctor
-            </p>
-    
-            <p  class="text-white h5 nav-link">
-                Patients
-            </p>
-    
-            <p class="text-white h5 nav-link">
-                Services
-            </p>
+
+        <div class="col-sm-6">
+            <div class="d-inline-flex justify-content-between">
+                <input type="text" class="searchText" for="searchText" name="searchText" />
+                <button class="btn btn-primary"> Search </button>
+            </div>
         </div>
 
-        <div class="container">
-
+        <div class="col-sm-3">
+            <div class="d-flex flex-row-reverse profile-logo">
+                <button class="btn btn-primary profile-btn"><span class="text-white h5">Profile</span></button>
+            </div>
         </div>
-        
+    </div>
+</div>
+
+<div class="container">
+    
 </div>

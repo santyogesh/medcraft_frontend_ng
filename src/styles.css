@@ -10,3 +10,16 @@
 .link:hover {
     text-decoration: none;
 }
+
+
+.navbar-link {
+    padding-left: 4%;
+    padding-right: 4%;
+    border: 2px solid rgb(76, 53, 117);
+    border-radius: 2%;
+}
+
+.navbar-link:hover {
+    border-color: rgb(55, 27, 88);
+    cursor: pointer;
+}
