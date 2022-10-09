@@ -1,6 +1,6 @@
 // organization registration 
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl, Validator, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
 import { AddressDetailsFetch } from "src/app/services/address-details-fetch.service";
 import { RegistrationService } from "../../services/registration.service";
 import { Router } from '@angular/router';
