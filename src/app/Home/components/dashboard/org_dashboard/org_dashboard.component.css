@@ -20,3 +20,15 @@
     border: 2px solid white;
     border-radius: 5px;
 }
+
+.searchBtn {
+    padding-left: 5%;
+    padding-right: 5%;
+    /* background-color: rgb(76, 53, 117); */
+    background-color: rgb(55, 27, 88);  
+    border: 1px solid rgb(55, 27, 88);  
+}
+
+.searchBtn:hover {
+    border-color: rgb(55, 27, 88);
+}

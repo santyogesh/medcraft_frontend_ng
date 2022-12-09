@@ -23,3 +23,8 @@
     border-color: rgb(55, 27, 88);
     cursor: pointer;
 }
+
+
+.smoke_text {
+    color: gray;
+}

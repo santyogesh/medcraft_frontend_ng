@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegistrationService } from './user_register/services/registration.service';
 import { OrgDashBoard } from './Home/components/dashboard/org_dashboard/org_dashboard.component';
 import { OrganizationLoginComponent } from './login/org_login/org_login.component';
+import { HospitalRegistration } from './Home/components/dashboard/hospital_registration/hospital_registration.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OrganizationLoginComponent } from './login/org_login/org_login.componen
     HomeComponent,
     OrganizationRegisterComponent,
     OrgDashBoard,
-    OrganizationLoginComponent
+    OrganizationLoginComponent,
+    HospitalRegistration
   ],
   imports: [
     BrowserModule,

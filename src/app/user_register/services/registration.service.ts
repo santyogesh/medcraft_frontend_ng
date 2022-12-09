@@ -18,8 +18,6 @@ export class RegistrationService {
 
     }
 
-
-
     async registerOrganization(organizationDetails : any) {
         let orgRegisterURL = this.baseURL + this.orgRegistrationEndPoint;
         console.log(orgRegisterURL);

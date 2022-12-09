@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="hospitalRegFormGroup" novalidate>
+        <div class="container">
+            <div class="row">
+                <div class="col form-group">
+                    <label for="hospital_name" class="smoke_text">
+                        hospital name
+                    </label>
+                    <br /> 
+                    <input  class="form-control" type="text" name="hospital_name" for="hospital_name" formControlName="hospital_name" />
+                </div>
+
+                <div class="col form-group">
+                    <label for="hospital_addr" class="smoke_text">
+                        hospital adddress
+                    </label>
+                    <br /> 
+                    <input class="form-control" type="text" name="hospital_addr" for="hospital_addr" formControlName="hospital_addr" />
+
+                </div>
+            </div>
+
+            <div class="row">
+                
+            </div>
+        </div>
+    </form>
+</div>

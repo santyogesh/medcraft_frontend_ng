@@ -21,9 +21,8 @@ export class OrganizationRegisterComponent implements OnInit {
     constructor(private addressDetailsFetch: AddressDetailsFetch, private registrationService : RegistrationService,
         private formBuilder: FormBuilder, private router: Router) {
         addressDetailsFetch.getCountyList().then((lst) => {console.log(lst);this.countryList = lst});
-            this.buildOrgRegistrationForm();
+        this.buildOrgRegistrationForm();
     }
-
     ngOnInit(): void {
     }
 

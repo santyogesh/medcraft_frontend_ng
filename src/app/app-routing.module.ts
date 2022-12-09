@@ -16,7 +16,7 @@ const routes: Routes = [
     }, 
     {
         path: 'organization/dashboard',
-        component: OrgDashBoard
+        component: OrgDashBoard,
     }, 
     {
         path: 'org_login',
