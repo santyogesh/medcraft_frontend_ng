@@ -1,28 +1,91 @@
+<org-navbar></org-navbar>
 <div class="container">
-    <form [formGroup]="hospitalRegFormGroup" novalidate>
+    <p class="text-center h2">
+        Hospital Registration
+    </p>
+</div>
+<div class="container my-3">
+    <form [formGroup]="hospitalRegFormGroup"  (ngSubmit)="registerHospitalFormSubmit(hospitalRegFormGroup.value)" novalidate>
         <div class="container">
             <div class="row">
                 <div class="col form-group">
                     <label for="hospital_name" class="smoke_text">
-                        hospital name
+                        Hospital Name
                     </label>
                     <br /> 
                     <input  class="form-control" type="text" name="hospital_name" for="hospital_name" formControlName="hospital_name" />
+                    <p *ngIf="hospitalRegFormGroup.controls['hospital_name'].invalid && hospitalRegFormGroup.controls['hospital_name'].touched" class="text-danger">
+                        Hospital name can't be empty
+                    </p>
                 </div>
 
                 <div class="col form-group">
                     <label for="hospital_addr" class="smoke_text">
-                        hospital adddress
+                        Hospital Adddress
                     </label>
                     <br /> 
                     <input class="form-control" type="text" name="hospital_addr" for="hospital_addr" formControlName="hospital_addr" />
-
+                    <p *ngIf="hospitalRegFormGroup.controls['hospital_addr'].invalid && hospitalRegFormGroup.controls['hospital_addr'].touched" class="text-danger">    
+                        Hospital Address can't be empty
+                    </p>
                 </div>
             </div>
 
             <div class="row">
-                
+                <div class="col form-group">
+                    <label for="phone"  class="smoke_text">Phone</label>
+                    <br />
+                    <input  class="form-control" type="text" for="phone" name="phone" formControlName="phone" />
+                    <p *ngIf="hospitalRegFormGroup.controls['phone'].invalid && hospitalRegFormGroup.controls['phone'].touched" class="text-danger">
+                        Hospital Phone Number can't be Empty
+                    </p>
+                </div>
+                <div class="col form-group">
+                    <label for="hospital_country" class="smoke_text">
+                        Hospital Country
+                    </label>
+                    <br />
+                    <select class="form-control" type="text" for="hospital_country" name="hospital_country" (change)="countryChanged($event)" formControlName="hospital_country">
+                        <option *ngFor="let l of countryList" [value]="l.iso2">{{ l.name }}</option>
+                    </select>
+                    <p *ngIf="hospitalRegFormGroup.controls['hospital_country'].invalid && hospitalRegFormGroup.controls['hospital_country'].touched" class="text-danger">
+                        Hospital Country can't be empty
+                    </p>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col form-group">
+                    <label for="hospital_state" class="smoke_text">Hospital State</label>
+                    <br /> 
+                    <select class="form-control" type="text" for="hospital_state" name="hospital_state"  (change)="stateChanged($event, hospitalRegFormGroup.value)" formControlName="hospital_state">
+                        <option *ngFor="let s of stateList" [value]="s.iso2">{{ s.name }}</option>
+                    </select>
+                    <p *ngIf="hospitalRegFormGroup.controls['hospital_state'].invalid && hospitalRegFormGroup.controls['hospital_state'].touched" class="text-danger">
+                        Hospital State can't be empty
+                    </p>
+                </div>
+
+                <div class="col form-group">
+                    <label for="hospital_city" class="smoke_text">
+                        Hospital City
+                    </label>
+                    <br />
+                    <select class="form-control" type="text" for="hospital_city" name="hospital_city">
+                        <option *ngFor="let c of cityList" [value]="c.iso2">{{ c.name }}</option>                                                            
+                    </select>
+                    <p *ngIf="hospitalRegFormGroup.controls['hospital_city'].invalid && hospitalRegFormGroup.controls['hospital_city'].touched" class="text-danger">
+                        Hospital City can'e be empty
+                    </p>
+                </div>
+            </div>
+
+            <div class="row align-center">
+                <div class="container" style="margin-left : 30%; width: 40%">
+                    <input type="submit" class="btn submit_btn text-white" value="Register Hospital"/>
+                </div>
+            </div>
+            
         </div>
     </form>
 </div>

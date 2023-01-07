@@ -20,7 +20,7 @@ export class HospitalRegistration implements OnInit {
     ngOnInit(): void {
         this.buildHospitalRegistrationForm();
         this.addressDetailsFetch.getCountyList().then((lst) => {
-
+            this.countryList = lst;
         });
     }
 
@@ -41,9 +41,13 @@ export class HospitalRegistration implements OnInit {
         console.log("================================");
     }
 
-    countyChanged($event : any) : void {
-        this.addressDetailsFetch.getStateList($event.target.value).then((lst) => {
+    countryChanged($event : any) : void {
+        console.log($event.target.value);
+        this.addressDetailsFetch.getStateList($event.target.value).then((lst : any) => {
+            console.log("========== state List ===============");
+            console.log(lst);
             this.stateList = lst;
+            console.log(this.stateList);
         });
     }
 

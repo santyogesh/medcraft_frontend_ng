@@ -13,6 +13,7 @@ import { RegistrationService } from './user_register/services/registration.servi
 import { OrgDashBoard } from './Home/components/dashboard/org_dashboard/org_dashboard.component';
 import { OrganizationLoginComponent } from './login/org_login/org_login.component';
 import { HospitalRegistration } from './Home/components/dashboard/hospital_registration/hospital_registration.component';
+import { OrgNavbarComponent } from './Home/components/dashboard/org_navbar/org_navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HospitalRegistration } from './Home/components/dashboard/hospital_regis
     OrganizationRegisterComponent,
     OrgDashBoard,
     OrganizationLoginComponent,
-    HospitalRegistration
+    HospitalRegistration,
+    OrgNavbarComponent
   ],
   imports: [
     BrowserModule,

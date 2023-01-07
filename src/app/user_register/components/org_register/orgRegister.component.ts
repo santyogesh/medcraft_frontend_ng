@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
     providers: [AddressDetailsFetch, RegistrationService]
 })
 export class OrganizationRegisterComponent implements OnInit {
-    orgFormGroup: FormGroup   = new FormGroup({});
+    orgFormGroup: FormGroup = new FormGroup({});
     countryList:any = [];
     stateList: any = [];
     cityList: any = [];
