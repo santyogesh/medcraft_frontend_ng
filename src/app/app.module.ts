@@ -14,6 +14,7 @@ import { OrgDashBoard } from './Home/components/dashboard/org_dashboard/org_dash
 import { OrganizationLoginComponent } from './login/org_login/org_login.component';
 import { HospitalRegistration } from './Home/components/dashboard/hospital_registration/hospital_registration.component';
 import { OrgNavbarComponent } from './Home/components/dashboard/org_navbar/org_navbar.component';
+import { LoginService } from './login/services/loginService.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { OrgNavbarComponent } from './Home/components/dashboard/org_navbar/org_n
   ],
   providers: [
     AddressDetailsFetch,
-    RegistrationService
+    RegistrationService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })
