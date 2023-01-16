@@ -11,10 +11,15 @@
 </div>
 
 <div class="container d-flex justify-content-center my-3">
+   
+
     <form [formGroup]="loginFormGroup" class="login_form" (ngSubmit)="submitLoginForm(loginFormGroup.value)">
         <p class="text-center text-black h3">
             Login
         </p>
+        <div *ngIf="invalidCred" class="container custom-alert-1">
+            Invalid Credential
+        </div>
         <hr />
         <div class="form-group">
             <label class="text-gray" for="orgEmail">organization email</label>

@@ -10,6 +10,7 @@ import { Route, Router } from "@angular/router";
 export class OrganizationLoginComponent implements OnInit {
 
     loginFormGroup: FormGroup = new FormGroup({});
+    invalidCred: boolean = false;
     constructor(private formBuilder : FormBuilder, private loginService : LoginService, private router : Router) {
         this.buildLoginForm();
     }
@@ -32,6 +33,10 @@ export class OrganizationLoginComponent implements OnInit {
             let orgLoginServerResponse : any = await this.loginService.organizationLogin(orgDetails);
             if(orgLoginServerResponse.status_code != 200) {
                 console.log("======== invalid login =======");
+                this.invalidCred = true;
+                setTimeout(() => {
+                    this.invalidCred = false;
+                }, 2000);
             } else {
                 console.log("=========== valid login ========");
                 this.router.navigate(["/organization/dashboard"]);
