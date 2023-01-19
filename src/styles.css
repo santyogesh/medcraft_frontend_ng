@@ -42,3 +42,37 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.big-font { 
+    font-size: 6em;
+}
+
+.navbar-background-color {
+    background-color: #150050;
+}
+
+.logo-nav-color {
+    color: #03C988;
+}
+
+.padding_top_10 {
+    padding-top: 10px;
+}
+
+.hover_underline:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    transition: width 2s;
+}
+
+.text_color_1 {
+    color: #00337C;
+}
+
+.text_color_2 {
+    color: #1C82AD;
+}
+
+.border_right_1_px {
+    border-right: 1px solid white;
+}
