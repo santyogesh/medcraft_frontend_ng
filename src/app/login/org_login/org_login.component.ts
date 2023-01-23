@@ -39,6 +39,7 @@ export class OrganizationLoginComponent implements OnInit {
                 }, 2000);
             } else {
                 console.log("=========== valid login ========");
+                console.log(orgLoginServerResponse.data);
                 this.router.navigate(["/organization/dashboard"]);
             }
         }catch(e) {

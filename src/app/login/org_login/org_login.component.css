@@ -6,12 +6,12 @@
 .submit-btn {
     padding-left: 10%;
     padding-right: 10%;
-    background-color: rgb(76, 53, 117);
-    border-color: rgb(55, 27, 88);
+    background-color: #150050;
+    border-color: #150050;
 }
 
 .submit-btn:hover {
-    background-color: rgb(55, 27, 88);
+    background-color: #150050;
 }
 
 .width_8 {

@@ -13,7 +13,7 @@ const routes: Routes = [
     }, 
     {
         path: 'org_signup',
-        component: OrganizationRegisterComponent
+        component: OrganizationRegisterComponent,
     }, 
     {
         path: 'organization/dashboard',
