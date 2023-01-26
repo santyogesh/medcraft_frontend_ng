@@ -10,15 +10,15 @@ const routes: Routes = [
     {
         path: '',
         component: HomeComponent
-    }, 
+    },
     {
         path: 'org_signup',
         component: OrganizationRegisterComponent,
-    }, 
+    },
     {
         path: 'organization/dashboard',
         component: OrgDashBoard,
-    }, 
+    },
     {
         path: 'org_login',
         component: OrganizationLoginComponent

@@ -15,6 +15,7 @@ import { OrganizationLoginComponent } from './login/org_login/org_login.componen
 import { HospitalRegistration } from './Home/components/dashboard/hospital_registration/hospital_registration.component';
 import { OrgNavbarComponent } from './Home/components/dashboard/org_navbar/org_navbar.component';
 import { LoginService } from './login/services/loginService.service';
+import { BtnTextComponent } from './components/btn-txt/btn-txt.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginService } from './login/services/loginService.service';
     OrgDashBoard,
     OrganizationLoginComponent,
     HospitalRegistration,
-    OrgNavbarComponent
+    OrgNavbarComponent,
+    BtnTextComponent
   ],
   imports: [
     BrowserModule,
