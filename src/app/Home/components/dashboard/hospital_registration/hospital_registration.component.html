@@ -1,8 +1,21 @@
-<org-navbar></org-navbar>
-<div class="container">
+<div class="container-fluid navbar-background-color py-1">
+    <div class="d-flex justify-content-around">
+        <div class="col-sm text-white">
+            <p class="logo-nav-color h1">MedCraft</p>
+        </div>
+        <div class="col-sm text-white d-flex justify-content-end padding_top_10">
+            <div class="mx-3">
+                <h5 class="hover_underline">log out</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
     <p class="text-center h2">
         Hospital Registration
     </p>
+    <hr />
 </div>
 <div class="container my-3">
     <form [formGroup]="hospitalRegFormGroup"  (ngSubmit)="registerHospitalFormSubmit(hospitalRegFormGroup.value)" novalidate>
@@ -80,10 +93,10 @@
                 </div>
             </div>
 
-            <div class="row align-center">
-                <div class="container" style="margin-left : 30%; width: 40%">
-                    <input type="submit" class="btn submit_btn text-white" value="Register Hospital"/>
-                </div>
+            <div class="d-flex justify-content-center my-3">
+                <button type="submit" class="btn btn-primary submit-btn">
+                    Register Hospital
+                </button>
             </div>
             
         </div>

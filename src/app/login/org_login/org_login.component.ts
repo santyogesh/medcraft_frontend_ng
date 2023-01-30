@@ -40,6 +40,7 @@ export class OrganizationLoginComponent implements OnInit {
             } else {
                 console.log("=========== valid login ========");
                 console.log(orgLoginServerResponse.data);
+                localStorage.setItem("user_details", JSON.stringify(orgLoginServerResponse.data));
                 this.router.navigate(["/organization/dashboard"]);
             }
         }catch(e) {

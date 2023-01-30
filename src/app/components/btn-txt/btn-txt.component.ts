@@ -8,6 +8,7 @@ export class BtnTextComponent implements OnInit {
     
     @Input() btnTxt: string = "";
     @Input() imgFileName: string = "";
+    @Input() routeLink: string = "";
 
     ngOnInit(): void {
         
