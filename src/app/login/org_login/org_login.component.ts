@@ -32,14 +32,11 @@ export class OrganizationLoginComponent implements OnInit {
             console.log(orgDetails);
             let orgLoginServerResponse : any = await this.loginService.organizationLogin(orgDetails);
             if(orgLoginServerResponse.status_code != 200) {
-                console.log("======== invalid login =======");
                 this.invalidCred = true;
                 setTimeout(() => {
                     this.invalidCred = false;
                 }, 2000);
             } else {
-                console.log("=========== valid login ========");
-                console.log(orgLoginServerResponse.data);
                 localStorage.setItem("user_details", JSON.stringify(orgLoginServerResponse.data));
                 this.router.navigate(["/organization/dashboard"]);
             }

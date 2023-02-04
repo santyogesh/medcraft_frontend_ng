@@ -18,6 +18,11 @@
     <hr />
 </div>
 <div class="container my-3">
+
+    <div class="alert custom-alert-1" *ngIf="errorMsgFlag || sucessFlag">
+        {{ msg }}
+    </div>
+
     <form [formGroup]="hospitalRegFormGroup"  (ngSubmit)="registerHospitalFormSubmit(hospitalRegFormGroup.value)" novalidate>
         <div class="container">
             <div class="row">
@@ -84,12 +89,26 @@
                         Hospital City
                     </label>
                     <br />
-                    <select class="form-control" type="text" for="hospital_city" name="hospital_city">
-                        <option *ngFor="let c of cityList" [value]="c.iso2">{{ c.name }}</option>                                                            
+                    <select class="form-control" type="text" for="hospital_city" name="hospital_city" formControlName="hospital_city">
+                        <option *ngFor="let c of cityList" [value]="c.name">{{ c.name }}</option>                                                            
                     </select>
                     <p *ngIf="hospitalRegFormGroup.controls['hospital_city'].invalid && hospitalRegFormGroup.controls['hospital_city'].touched" class="text-danger">
                         Hospital City can'e be empty
                     </p>
+                </div>
+            </div>
+
+    
+            <div class="row">
+                <div class="col form-grop">
+                    <label for="hospital_pincode" class="smoke_text">Hospital Pincode</label>
+                    <br />
+                    <input type="text"  class="form-control" for="hospital_pincode" name="hospital_pincode" formControlName="hospital_pincode" />
+                </div>
+                <div class="col form-group">
+                    <label for="hospital_password" class="smoke_text">Password</label>
+                    <br/>
+                    <input type="password" class="form-control" for="hospital_password" name="hospital_password" formControlName="hospital_password" />
                 </div>
             </div>
 

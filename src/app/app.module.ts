@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/components/home/home.compoennt';
 import { OrganizationRegisterComponent } from './user_register/components/org_register/orgRegister.component';
@@ -16,7 +15,8 @@ import { HospitalRegistration } from './Home/components/dashboard/hospital_regis
 import { OrgNavbarComponent } from './Home/components/dashboard/org_navbar/org_navbar.component';
 import { LoginService } from './login/services/loginService.service';
 import { BtnTextComponent } from './components/btn-txt/btn-txt.component';
-
+import { HospitalListView } from './Home/components/hospitallistview/hospitallistview.component';
+import { HospitalLoginComponents } from './hospital/hospital-login/hospital-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +26,9 @@ import { BtnTextComponent } from './components/btn-txt/btn-txt.component';
     OrganizationLoginComponent,
     HospitalRegistration,
     OrgNavbarComponent,
-    BtnTextComponent
+    BtnTextComponent,
+    HospitalListView,
+    HospitalLoginComponents
   ],
   imports: [
     BrowserModule,
