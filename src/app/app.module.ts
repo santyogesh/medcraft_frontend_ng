@@ -17,6 +17,7 @@ import { LoginService } from './login/services/loginService.service';
 import { BtnTextComponent } from './components/btn-txt/btn-txt.component';
 import { HospitalListView } from './Home/components/hospitallistview/hospitallistview.component';
 import { HospitalLoginComponents } from './hospital/hospital-login/hospital-login.component';
+import { RestAPIServices } from './hospital/services/resapi-services.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { HospitalLoginComponents } from './hospital/hospital-login/hospital-logi
   providers: [
     AddressDetailsFetch,
     RegistrationService,
-    LoginService
+    LoginService,
+    RestAPIServices
   ],
   bootstrap: [AppComponent]
 })

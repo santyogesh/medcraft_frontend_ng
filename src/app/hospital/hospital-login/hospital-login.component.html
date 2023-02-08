@@ -5,7 +5,7 @@
         </div>
         <div class="col-sm text-white d-flex justify-content-end padding_top_10">
             <div class="mx-3">
-                <h5 class="hover_underline">log out</h5>
+                <h5 class="hover_underline" routerLink="/">Home</h5>
             </div>
         </div>
     </div>
@@ -13,19 +13,23 @@
 
 
 <div class="container d-flex justify-content-center my-3">
-    <form class="form" class="login_form">
+
+    <form class="form" class="login_form" [formGroup]="hospitalLoginFormGroup" (ngSubmit)="hospitalLoginFormSubmit(hospitalLoginFormGroup.value)">
+        <div *ngIf="flag" class="alert custom-alert-1">
+            {{ msg }}
+        </div>
         <p class="text-center text-black h3">
             Login
         </p>
 
         <div class="form-group">
             <label class="text-gray" for="hospitalName">Hospital Name</label>
-            <input  class="form-control" type="text" name="hospital_name" for="hospital_name"/>
+            <input  class="form-control" type="text" name="hospital_name" for="hospital_name" name="hospital_name" formControlName="hospital_name"/>
         </div>
 
         <div class="form-group">
             <label class="text-gray" for="hospitalPassword">Password</label>
-            <input class="form-control" type="password" name="hospital_password" for="hospital_password" />
+            <input class="form-control" type="password" name="hospital_password" for="hospital_password" name="hospital_pass" formControlName="hospital_password"/>
         </div>
         
         <hr /> 
