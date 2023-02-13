@@ -18,6 +18,8 @@ import { BtnTextComponent } from './components/btn-txt/btn-txt.component';
 import { HospitalListView } from './Home/components/hospitallistview/hospitallistview.component';
 import { HospitalLoginComponents } from './hospital/hospital-login/hospital-login.component';
 import { RestAPIServices } from './hospital/services/resapi-services.service';
+import { HospitalDashBoardComponent } from './hospital/hospital_dashboard/hospital_dashboard.component';
+import { PatientRegistration } from './hospital/patient_registration/patient_registration.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { RestAPIServices } from './hospital/services/resapi-services.service';
     OrgNavbarComponent,
     BtnTextComponent,
     HospitalListView,
-    HospitalLoginComponents
+    HospitalLoginComponents,
+    HospitalDashBoardComponent,
+    PatientRegistration
   ],
   imports: [
     BrowserModule,

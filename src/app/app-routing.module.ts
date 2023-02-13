@@ -7,6 +7,8 @@ import { OrganizationLoginComponent } from './login/org_login/org_login.componen
 import { HospitalRegistration } from './Home/components/dashboard/hospital_registration/hospital_registration.component';
 import { HospitalListView } from './Home/components/hospitallistview/hospitallistview.component';
 import { HospitalLoginComponents } from './hospital/hospital-login/hospital-login.component';
+import { HospitalDashBoardComponent } from './hospital/hospital_dashboard/hospital_dashboard.component';
+import { PatientRegistration } from './hospital/patient_registration/patient_registration.component';
 
 const routes: Routes = [
     {
@@ -36,6 +38,14 @@ const routes: Routes = [
     {
         path : 'hospital/hospital_login',
         component: HospitalLoginComponents
+    },
+    {
+        path: 'hospital/dashboard',
+        component: HospitalDashBoardComponent
+    },
+    {
+        path: 'hospital/patient_appointment',
+        component: PatientRegistration
     }
 ]
 

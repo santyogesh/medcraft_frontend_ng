@@ -1,0 +1,76 @@
+<div class="container-fluid navbar-background-color py-1">
+    <div class="d-flex justify-content-around">
+        <div class="col-sm text-white">
+            <p class="logo-nav-color h1">MedCraft</p>
+        </div>
+        <div class="col-sm text-white d-flex justify-content-end padding_top_10">
+            <div class="mx-3">
+                <h5 class="hover_underline">log out</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
+    <form [formGroup]="patientRegitrationForm" (ngSubmit)="submitPatientForm(patientRegitrationForm.value)">
+        
+        <div class="row">
+            <div class="col form-group">
+                <label for="Patient Type" class="h6 smoke_text">Patient Type</label>
+                <select for="patient_type" class="form-control" name="patient_type" (change)="onChangePatientType($event)" formControlName="patient_type">
+                    <option value="1">New Registration</option>
+                    <option value="2">Revist Patient</option>
+                </select>
+            </div>
+        </div>
+        <div *ngIf="patientRegistrationValue == 1" class="container my-3">
+            <div class="row">
+                <div class="col form-group">
+                    <label for="Patient Name" class="h6">Patient Name</label>
+                    <input for="patient_name" class="form-control" type="text" name="patient_name" formControlName="patient_name"/>
+                </div>
+
+                <div class="col form-group">
+                    <label for="Patient Phone" class="h6">Patient Phone</label> 
+                    <input for="patient_phone" class="form-control" type="text"  formControlName="patient_phone"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col from-group">
+                    <label for="patient_address" class="h6">Patient Address</label>
+                    <textarea for="patient_address" class="form-control" type="text" formControlName="patient_address"></textarea>
+                </div>
+            </div> 
+        </div>
+        <div *ngIf="patientRegistrationValue == 2" class="container my-3">
+            <div class="row">
+                <div class="col form-group">
+                    <label for="patient_uid" class="h6">Patient UID</label>
+                    <input type="text" for="patient_uid" class="form-control" formControlName="patient_uid" />
+                </div>
+            </div>
+        </div> 
+        <div *ngIf="patientRegistrationValue != -1" class="container my-3">
+            <hr />
+            <div class="row">
+                <div class="col form-group">
+                    <label for="department_name" class="h6">Department Name</label>
+                    <select class="form-control" name="patient_dept" formControlName="patient_dept">
+                        <option value="ENT">ENT</option>
+                        <option value="Dentist">Dentist</option>
+                    </select>
+                </div>
+                <div class="col form-group">
+                    <label for="doctor_name" class="h6">Doctor Name</label>
+                    <select class="form-control" name="doctor_name" formControlName="doctor_name">
+                        <option value="check1">Random Name 1</option>
+                        <option value="check2">Random Name 2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="patientRegistrationValue != -1" class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary submit-btn">Register Patient</button>
+        </div>
+    </form>
+</div>
