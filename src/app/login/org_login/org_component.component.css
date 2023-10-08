@@ -1,0 +1,65 @@
+.login_form {
+    /* border: 1px solid black; */
+    width: 50%;
+}
+
+.submit-btn {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #150050;
+    border-color: #150050;
+}
+
+.submit-btn:hover {
+    background-color: #150050;
+}
+
+.width_8 {
+    width: 80%;
+}
+
+.smoke_text {
+    color: gray;
+}
+
+.height_6 {
+    height: 40px;
+}
+
+.input_border_rad_10 {
+    border: 1px solid rgb(76, 53, 117);
+    border-radius: 3px;
+}
+
+.submit_btn_container {
+    margin-left: 30%;
+    width: 40%;
+}
+
+.submit_btn {
+    width: 100%;
+    border: 1px solid rgb(76, 53, 117);
+    background-color: rgb(76, 53, 117);
+}
+
+.left_margin_20 {
+    margin-left: 10%;
+}
+
+.form_contaienr {
+    margin-top: 5%;
+}
+
+.user_login_div {
+    border: 1px solid rgb(91, 75, 138);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(91, 75, 138);
+    margin-right: 20px;
+}
+
+.user_login_div:hover {
+    background-color: rgb(120, 88, 166);
+    cursor: pointer;
+}
