@@ -1,0 +1,46 @@
+<div class="container-fluid navbar-background-color py-1">
+    <div class="d-flex justify-content-around">
+        <div class="col-sm text-white">
+            <p class="logo-nav-color h1">MedCraft</p>
+        </div>
+        <div class="col-sm text-white d-flex justify-content-end padding_top_10">
+            <div>
+                <h5 class="px-3 border_right_1_px" routerLink="/"><span class="hover_underline">home</span></h5>
+            </div>
+            <div class="mx-3">
+                <h5 class="hover_underline">patients</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center my-3">
+   
+
+    <form [formGroup]="loginFormGroup" class="login_form" (ngSubmit)="submitLoginForm(loginFormGroup.value)" autocomplete="off">
+        <p class="text-center text-black h3">
+            Login
+        </p>
+        <div *ngIf="invalidCred" class="container custom-alert-1">
+            Invalid Credential
+        </div>
+        <hr />
+        <div class="form-group">
+            <label class="text-gray" for="orgEmail">organization email</label>
+            <input type="text" class="form-control" for="orgEmail" name="organization_email" formControlName="organization_email" required/>
+        </div>
+        <div class="form-group">
+            <label class="text-gray" for="orgPassword">password</label>
+            <input type="password" class="form-control" for="orgPassword" name="organization_password" formControlName="organization_password" required />
+        </div>
+        <div class="d-flex justify-content-center">
+            register a new organization, <a routerLink="/org_signup" class="text-primary">sign up</a>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-center my-3">
+            <button type="submit" class="btn btn-primary submit-btn">
+                Login
+            </button>
+        </div>
+    </form>
+</div>
